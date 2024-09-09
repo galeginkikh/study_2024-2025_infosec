@@ -1,0 +1,162 @@
+<h1 id="информация">Информация</h1>
+<h2 id="докладчик">Докладчик</h2>
+<div class="columns" data-align="center">
+<div class="column" style="width:70%;">
+<ul>
+<li>Легиньких Галина Андреевна</li>
+<li>НФИбд-02-21</li>
+<li>Российский университет дружбы народов</li>
+<li><a href="mailto:1032216447@pfur.ru">1032216447@pfur.ru</a></li>
+<li><a href="https://github.com/galeginkikh"
+class="uri">https://github.com/galeginkikh</a></li>
+</ul>
+</div><div class="column" style="width:30%;">
+
+</div>
+</div>
+<h1 id="выполнение">Выполнение</h1>
+<h2 id="цель-работы">Цель работы</h2>
+<p>Получение практических навыков работы в консоли с атрибутами файлов
+для групп пользователей.</p>
+<h1 id="выполнение-лабораторной-работы">Выполнение лабораторной
+работы</h1>
+<p><strong>1.</strong> Создала учетную запись пользователя guest2 и
+задала пароль.</p>
+<figure>
+<img src="image/1.png" id="fig:001" style="width:70.0%"
+alt="Новая учётная запись" />
+<figcaption aria-hidden="true">Новая учётная запись</figcaption>
+</figure>
+<h2 id="section"></h2>
+<p><strong>2.</strong> Добавьте пользователя guest2 в группу guest.</p>
+<figure>
+<img src="image/2.png" id="fig:002" style="width:70.0%"
+alt="Добавление в группу" />
+<figcaption aria-hidden="true">Добавление в группу</figcaption>
+</figure>
+<h2 id="section-1"></h2>
+<p><strong>3.</strong> Осуществила вход в систему от двух пользователей
+на двух разных консолях: guest на первой консоли и guest2 на второй
+консоли.</p>
+<figure>
+<img src="image/3.png" id="fig:003" style="width:40.0%"
+alt="2 консоли" />
+<figcaption aria-hidden="true">2 консоли</figcaption>
+</figure>
+<h2 id="section-2"></h2>
+<p><strong>4.</strong> Для обоих пользователей командой pwd определила
+директорию, в которой нахожусь. Сравнила её с приглашениями командной
+строки.</p>
+<figure>
+<img src="image/4.png" id="fig:004" style="width:70.0%" alt="guest" />
+<figcaption aria-hidden="true">guest</figcaption>
+</figure>
+<h2 id="section-3"></h2>
+<figure>
+<img src="image/5.png" id="fig:005" style="width:70.0%" alt="guest2" />
+<figcaption aria-hidden="true">guest2</figcaption>
+</figure>
+<h2 id="section-4"></h2>
+<p><strong>5.</strong> Уточнила имя пользователя, его группу, кто входит
+в неё и к каким группам принадлежит он сам. Определила командами groups
+guest и groups guest2, в какие группы входят пользователи guest и
+guest2. Сравнила вывод команды groups с выводом команд id -Gn и id
+-G.</p>
+<figure>
+<img src="image/6.png" id="fig:006" style="width:70.0%"
+alt="groups guest" />
+<figcaption aria-hidden="true">groups guest</figcaption>
+</figure>
+<h2 id="section-5"></h2>
+<figure>
+<img src="image/7.png" id="fig:007" style="width:70.0%"
+alt="groups guest2" />
+<figcaption aria-hidden="true">groups guest2</figcaption>
+</figure>
+<h2 id="section-6"></h2>
+<p><strong>6.</strong> Сравнила полученную информацию с содержимым файла
+/etc/group.</p>
+<figure>
+<img src="image/8.png" id="fig:008" style="width:70.0%" alt="файл" />
+<figcaption aria-hidden="true">файл</figcaption>
+</figure>
+<h2 id="section-7"></h2>
+<p><strong>7.</strong> От имени пользователя guest2 выполнила
+регистрацию пользователя guest2 в группе guest.</p>
+<figure>
+<img src="image/10.png" id="fig:010" style="width:70.0%"
+alt="регистрация" />
+<figcaption aria-hidden="true">регистрация</figcaption>
+</figure>
+<h2 id="section-8"></h2>
+<p><strong>8.</strong> От имени пользователя guest изменила права
+директории /home/guest, разрешив все действия для пользователей группы.
+Сняла с директории /home/guest/dir1 все атрибуты командой.</p>
+<figure>
+<img src="image/11.png" id="fig:011" style="width:70.0%" alt="права" />
+<figcaption aria-hidden="true">права</figcaption>
+</figure>
+<h2 id="section-9"></h2>
+<p><strong>9.</strong> Меняя атрибуты у директории dir1 и файла file1 от
+имени пользователя guest и делая проверку от пользователя guest2,
+заполнила таблицу, определив опытным путём, какие операции разрешены, а
+какие нет.</p>
+<h2 id="section-10"></h2>
+<p><strong>10.</strong> На основании заполненной таблицы определила те
+или иные минимально необходимые права для выполнения пользователем
+guest2 операций внутри директории dir1 и заполнила таблицу.</p>
+<h2 id="section-11"></h2>
+<table>
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 39%" />
+<col style="width: 32%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Операция</th>
+<th>Права на директорию</th>
+<th>Права на файл</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Создание файла</td>
+<td><code>(030)</code></td>
+<td><code>(000)</code></td>
+</tr>
+<tr class="even">
+<td>Удаление файла</td>
+<td><code>(030)</code></td>
+<td><code>(000)</code></td>
+</tr>
+<tr class="odd">
+<td>Чтение файла</td>
+<td><code>(010)</code></td>
+<td><code>(040)</code></td>
+</tr>
+<tr class="even">
+<td>Запись в файл</td>
+<td><code>(010)</code></td>
+<td><code>(020)</code></td>
+</tr>
+<tr class="odd">
+<td>Переименование файла</td>
+<td><code>(030)</code></td>
+<td><code>(000)</code></td>
+</tr>
+<tr class="even">
+<td>Создание поддиректории</td>
+<td><code>(030)</code></td>
+<td><code>(000)</code></td>
+</tr>
+<tr class="odd">
+<td>Удаление поддиректории</td>
+<td><code>(030)</code></td>
+<td><code>(000)</code></td>
+</tr>
+</tbody>
+</table>
+<h1 id="вывод">Вывод</h1>
+<p>Получила практические навыки работы в консоли с атрибутами файлов для
+групп пользователей.</p>
