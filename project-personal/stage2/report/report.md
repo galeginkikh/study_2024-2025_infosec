@@ -1,17 +1,12 @@
 ---
 ## Front matter
-title: "Шаблон отчёта по лабораторной работе"
-subtitle: "Простейший вариант"
-author: "Дмитрий Сергеевич Кулябов"
+title: "Отчет по проекту"
+subtitle: "Этап 2"
+author: "Легиньких Галина Андреевна"
 
 ## Generic otions
 lang: ru-RU
 toc-title: "Содержание"
-
-## Bibliography
-bibliography: bib/cite.bib
-csl: pandoc/csl/gost-r-7-0-5-2008-numeric.csl
-
 ## Pdf output format
 toc: true # Table of contents
 toc-depth: 2
@@ -25,24 +20,22 @@ documentclass: scrreprt
 polyglossia-lang:
   name: russian
   options:
-	- spelling=modern
-	- babelshorthands=true
+  - spelling=modern
+  - babelshorthands=true
 polyglossia-otherlangs:
   name: english
 ## I18n babel
 babel-lang: russian
 babel-otherlangs: english
 ## Fonts
-mainfont: IBM Plex Serif
-romanfont: IBM Plex Serif
-sansfont: IBM Plex Sans
-monofont: IBM Plex Mono
-mathfont: STIX Two Math
-mainfontoptions: Ligatures=Common,Ligatures=TeX,Scale=0.94
-romanfontoptions: Ligatures=Common,Ligatures=TeX,Scale=0.94
-sansfontoptions: Ligatures=Common,Ligatures=TeX,Scale=MatchLowercase,Scale=0.94
-monofontoptions: Scale=MatchLowercase,Scale=0.94,FakeStretch=0.9
-mathfontoptions:
+mainfont: PT Serif
+romanfont: PT Serif
+sansfont: PT Sans
+monofont: PT Mono
+mainfontoptions: Ligatures=TeX
+romanfontoptions: Ligatures=TeX
+sansfontoptions: Ligatures=TeX,Scale=MatchLowercase
+monofontoptions: Scale=MatchLowercase,Scale=0.9
 ## Biblatex
 biblatex: true
 biblio-style: "gost-numeric"
@@ -70,52 +63,60 @@ header-includes:
 
 # Цель работы
 
-Здесь приводится формулировка цели лабораторной работы. Формулировки
-цели для каждой лабораторной работы приведены в методических
-указаниях.
+Преобретение практических навыков по установке DVWA.
 
-Цель данного шаблона --- максимально упростить подготовку отчётов по
-лабораторным работам.  Модифицируя данный шаблон, студенты смогут без
-труда подготовить отчёт по лабораторным работам, а также познакомиться
-с основными возможностями разметки Markdown.
+# Выполнение этапа 2
 
-# Задание
+**1.** Перешла в директорию /var/www/html. Затем клонировала репозиторий. (рис. [-@fig:001])
 
-Здесь приводится описание задания в соответствии с рекомендациями
-методического пособия и выданным вариантом.
+![Репозиторий](image/1.png){ #fig:001 width=60% }
 
-# Теоретическое введение
+**2.** Проверяю, что файл склонировался. Повышаю права доступа к папке до 777. (рис. [-@fig:002]) (рис. [-@fig:003])
 
-Здесь описываются теоретические аспекты, связанные с выполнением работы.
+![Наличие папки](image/2.png){ #fig:002 width=60% }
 
-Например, в табл. [-@tbl:std-dir] приведено краткое описание стандартных каталогов Unix.
+![Повышение прав](image/3.png){ #fig:003 width=60% }
 
-: Описание некоторых каталогов файловой системы GNU Linux {#tbl:std-dir}
+**3.** Перешла в каталог /dvwa/config. Создала копию файла. (рис. [-@fig:004]) 
 
-| Имя каталога | Описание каталога                                                                                                          |
-|--------------|----------------------------------------------------------------------------------------------------------------------------|
-| `/`          | Корневая директория, содержащая всю файловую                                                                               |
-| `/bin `      | Основные системные утилиты, необходимые как в однопользовательском режиме, так и при обычной работе всем пользователям     |
-| `/etc`       | Общесистемные конфигурационные файлы и файлы конфигурации установленных программ                                           |
-| `/home`      | Содержит домашние директории пользователей, которые, в свою очередь, содержат персональные настройки и данные пользователя |
-| `/media`     | Точки монтирования для сменных носителей                                                                                   |
-| `/root`      | Домашняя директория пользователя  `root`                                                                                   |
-| `/tmp`       | Временные файлы                                                                                                            |
-| `/usr`       | Вторичная иерархия для данных пользователя                                                                                 |
+![Каталог /dvwa/config](image/4.png){ #fig:004 width=60% }
 
-Более подробно про Unix см. в [@tanenbaum_book_modern-os_ru; @robbins_book_bash_en; @zarrelli_book_mastering-bash_en; @newham_book_learning-bash_en].
+**4.** Открыла файл в тектовом редакторе. (рис. [-@fig:005])
 
-# Выполнение лабораторной работы
+![Редактор](image/5.png){ #fig:005 width=60% }
 
-Описываются проведённые действия, в качестве иллюстрации даётся ссылка на иллюстрацию (рис. [-@fig:001]).
+**5.** Изменила данные об имени пользователя и пароле. (рис. [-@fig:006])
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![Имя и пароль](image/6.png){ #fig:006 width=60% }
 
-# Выводы
+**6.** Запустила mysql. (рис. [-@fig:007])
 
-Здесь кратко описываются итоги проделанной работы.
+![mysql](image/7.png){ #fig:007 width=60% }
 
-# Список литературы{.unnumbered}
+**7.** Авторизовалась в базе от имени пользователя root. Создала нового пользователя. (рис. [-@fig:008])
 
-::: {#refs}
-:::
+![Новый пользователь](image/8.png){ #fig:008 width=60% }
+
+**8.** Перешла в директорию \apache2. (рис. [-@fig:009])
+
+![apache2](image/9.png){ #fig:009 width=60% } 
+
+**9.** В файле php.ini изменила один параметр. (рис. [-@fig:010])
+
+![Параметр](image/10.png){ #fig:010 width=60% }
+
+**10.** Запустила службу веб-сервера apache. (рис. [-@fig:012])
+
+![Запуск веб-сервера](image/12.png){ #fig:012 width=60% }
+
+**11.** Зашла в веб-сервер. (рис. [-@fig:013])
+
+![Веб-сервер](image/13.png){ #fig:013 width=60% }
+
+**12.** Авторизовалась. (рис. [-@fig:014])
+
+![Авторизация](image/14.png){ #fig:014 width=60% }
+
+# Вывод
+
+Преобрела практические навыки по установке DVWA.
