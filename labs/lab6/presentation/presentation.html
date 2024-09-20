@@ -1,0 +1,269 @@
+<h1 id="информация">Информация</h1>
+<h2 id="докладчик">Докладчик</h2>
+<div class="columns" data-align="center">
+<div class="column" style="width:70%;">
+<ul>
+<li>Легиньких Галина Андреевна</li>
+<li>НФИбд-02-21</li>
+<li>Российский университет дружбы народов</li>
+<li><a href="mailto:1032216447@pfur.ru">1032216447@pfur.ru</a></li>
+<li><a href="https://github.com/galeginkikh"
+class="uri">https://github.com/galeginkikh</a></li>
+</ul>
+</div><div class="column" style="width:30%;">
+
+</div>
+</div>
+<h1 id="выполнение">Выполнение</h1>
+<h2 id="цель-работы">Цель работы</h2>
+<p>Развить навыки администрирования ОС Linux. Получить первое
+практическое знакомство с технологией SELinux. Проверить работу SELinx
+на практике совместно с веб-сервером Apache.</p>
+<h2 id="выполнение-лабораторной-работы">Выполнение лабораторной
+работы</h2>
+<p><strong>1.</strong> Скачала httpd.</p>
+<figure>
+<img src="image/1.png" id="fig:001" style="width:70.0%"
+alt="install httpd" />
+<figcaption aria-hidden="true">install httpd</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-1">Выполнение лабораторной
+работы</h2>
+<p><strong>2.</strong> В конфигурационном файле /etc/httpd/httpd.conf
+задала параметр ServerName. Отключила пакетный фильтр.</p>
+<figure>
+<img src="image/2.png" id="fig:002" style="width:70.0%"
+alt="Пакетные фильтры" />
+<figcaption aria-hidden="true">Пакетные фильтры</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-2">Выполнение лабораторной
+работы</h2>
+<p><strong>3.</strong> Вошла в систему с полученными учётными данными и
+убедилась, что SELinux работает в режиме enforcing политики
+targeted.</p>
+<figure>
+<img src="image/3.png" id="fig:003" style="width:70.0%" alt="SELinux" />
+<figcaption aria-hidden="true">SELinux</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-3">Выполнение лабораторной
+работы</h2>
+<p><strong>4.</strong> Обратитилась с помощью браузера к веб-серверу,
+запущенному на компьютере, и убедилась, что последний работает. Он не
+работает, запустила его так же, но с параметром start.</p>
+<figure>
+<img src="image/4.png" id="fig:004" style="width:70.0%"
+alt="Сервер_1" />
+<figcaption aria-hidden="true">Сервер_1</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-4">Выполнение лабораторной
+работы</h2>
+<figure>
+<img src="image/5.png" id="fig:005" style="width:70.0%"
+alt="Сервер_2" />
+<figcaption aria-hidden="true">Сервер_2</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-5">Выполнение лабораторной
+работы</h2>
+<p><strong>5.</strong> Нашла веб-сервер Apache в списке процессов,
+определила его контекст безопасности.</p>
+<figure>
+<img src="image/6.png" id="fig:006" style="width:70.0%"
+alt="Веб-сервер Apache" />
+<figcaption aria-hidden="true">Веб-сервер Apache</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-6">Выполнение лабораторной
+работы</h2>
+<p><strong>6.</strong> Посмотрела текущее состояние переключателей
+SELinux для Apache. Обратила внимание, что многие из них находятся в
+положении «off».</p>
+<figure>
+<img src="image/7.png" id="fig:007" style="width:40.0%"
+alt="Состояние переключателей SELinux" />
+<figcaption aria-hidden="true">Состояние переключателей
+SELinux</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-7">Выполнение лабораторной
+работы</h2>
+<p><strong>7.</strong> Посмотрела статистику по политике с помощью
+команды seinfo, также определила множество пользователей, ролей,
+типов.</p>
+<figure>
+<img src="image/8.png" id="fig:008" style="width:40.0%" alt="seinfo" />
+<figcaption aria-hidden="true">seinfo</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-8">Выполнение лабораторной
+работы</h2>
+<p><strong>8.</strong> Определила тип файлов и поддиректорий,
+находящихся в директории /var/www.</p>
+<figure>
+<img src="image/9.png" id="fig:009" style="width:70.0%"
+alt="Тип файлов и поддиректорий в /var/www" />
+<figcaption aria-hidden="true">Тип файлов и поддиректорий в
+/var/www</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-9">Выполнение лабораторной
+работы</h2>
+<p><strong>9.</strong> Определила тип файлов, находящихся в директории
+/var/www/html.</p>
+<figure>
+<img src="image/10.png" id="fig:010" style="width:70.0%"
+alt="Тип файлов и поддиректорий в /var/www/html" />
+<figcaption aria-hidden="true">Тип файлов и поддиректорий в
+/var/www/html</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-10">Выполнение лабораторной
+работы</h2>
+<p><strong>10.</strong> Определила круг пользователей, которым разрешено
+создание файлов в директории /var/www/html.</p>
+<figure>
+<img src="image/11.png" id="fig:011" style="width:70.0%"
+alt="Права на создание файлов" />
+<figcaption aria-hidden="true">Права на создание файлов</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-11">Выполнение лабораторной
+работы</h2>
+<p><strong>11.</strong> Создала от имени суперпользователя html-файл
+/var/www/html/test.html.</p>
+<figure>
+<img src="image/12.png" id="fig:012" style="width:70.0%"
+alt="test.html" />
+<figcaption aria-hidden="true">test.html</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-12">Выполнение лабораторной
+работы</h2>
+<p><strong>12.</strong> Проверила контекст созданного файла.</p>
+<figure>
+<img src="image/13.png" id="fig:013" style="width:70.0%"
+alt="Контекст test.html" />
+<figcaption aria-hidden="true">Контекст test.html</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-13">Выполнение лабораторной
+работы</h2>
+<p><strong>13.</strong> Обратитилась к файлу через веб-сервер, введя в
+браузере адрес http://127.0.0.1/test.html.</p>
+<figure>
+<img src="image/14.png" id="fig:014" style="width:70.0%"
+alt="Веб-сервер" />
+<figcaption aria-hidden="true">Веб-сервер</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-14">Выполнение лабораторной
+работы</h2>
+<p><strong>14.</strong> Изучила справку man httpd_selinux и выяснила,
+какие контексты файлов определены для httpd.</p>
+<figure>
+<img src="image/15.png" id="fig:015" style="width:40.0%" alt="man" />
+<figcaption aria-hidden="true">man</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-15">Выполнение лабораторной
+работы</h2>
+<p><strong>15.</strong> Изменила контекст файла /var/www/html/test.html
+с httpd_sys_content_t на любой другой, к которому процесс httpd не
+должен иметь доступа.</p>
+<figure>
+<img src="image/16.png" id="fig:016" style="width:70.0%"
+alt="Изменение контекста" />
+<figcaption aria-hidden="true">Изменение контекста</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-16">Выполнение лабораторной
+работы</h2>
+<p><strong>16.</strong> Попробовала ещё раз получить доступ к файлу
+через веб-сервер, введя в браузере адрес http://127.0.0.1/test.html.</p>
+<figure>
+<img src="image/17.png" id="fig:017" style="width:70.0%"
+alt="Ошибка веб-сервера" />
+<figcaption aria-hidden="true">Ошибка веб-сервера</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-17">Выполнение лабораторной
+работы</h2>
+<p><strong>17.</strong> Проанализировала ситуацию. Также просмотрела
+лог-файл.</p>
+<figure>
+<img src="image/18.png" id="fig:018" style="width:70.0%" alt="Права" />
+<figcaption aria-hidden="true">Права</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-18">Выполнение лабораторной
+работы</h2>
+<figure>
+<img src="image/19.png" id="fig:019" style="width:70.0%"
+alt="Лог-файл" />
+<figcaption aria-hidden="true">Лог-файл</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-19">Выполнение лабораторной
+работы</h2>
+<p><strong>18.</strong> Нашла строчку Listen 80 и заменила её на Listen
+81.</p>
+<figure>
+<img src="image/20.png" id="fig:020" style="width:70.0%"
+alt="Listen 81" />
+<figcaption aria-hidden="true">Listen 81</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-20">Выполнение лабораторной
+работы</h2>
+<p><strong>19.</strong> Проанализировала лог-файлы.</p>
+<figure>
+<img src="image/21.png" id="fig:021" style="width:70.0%"
+alt="Лог-файлы_2" />
+<figcaption aria-hidden="true">Лог-файлы_2</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-21">Выполнение лабораторной
+работы</h2>
+<p><strong>20.</strong> Проверила список портов командой. Убедитесь, что
+порт 81 появился в списке.</p>
+<figure>
+<img src="image/22.png" id="fig:022" style="width:70.0%"
+alt="Список портов" />
+<figcaption aria-hidden="true">Список портов</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-22">Выполнение лабораторной
+работы</h2>
+<p><strong>21.</strong> Попробовала запустить веб-сервер Apache ещё
+раз.</p>
+<figure>
+<img src="image/23.png" id="fig:023" style="width:70.0%"
+alt="Unable to connect" />
+<figcaption aria-hidden="true">Unable to connect</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-23">Выполнение лабораторной
+работы</h2>
+<p><strong>22.</strong> Вернула контекст httpd_sys_cоntent__t к файлу
+/var/www/html/ test.html. После этого попробовала получить доступ к
+файлу через веб-сервер, введя в браузере адрес
+http://127.0.0.1:81/test.html.</p>
+<figure>
+<img src="image/24.png" id="fig:024" style="width:70.0%" alt="chcon" />
+<figcaption aria-hidden="true">chcon</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-24">Выполнение лабораторной
+работы</h2>
+<figure>
+<img src="image/25.png" id="fig:025" style="width:70.0%"
+alt="Веб-сервер_81" />
+<figcaption aria-hidden="true">Веб-сервер_81</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-25">Выполнение лабораторной
+работы</h2>
+<p><strong>23.</strong> Исправила обратно конфигурационный файл apache,
+вернув Listen 80.</p>
+<h2 id="выполнение-лабораторной-работы-26">Выполнение лабораторной
+работы</h2>
+<p><strong>24.</strong> Удалила привязку http_port_t к 81 порту и
+проверьте, что порт 81 удалён.</p>
+<figure>
+<img src="image/26.png" id="fig:026" style="width:70.0%"
+alt="Порт 81" />
+<figcaption aria-hidden="true">Порт 81</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-27">Выполнение лабораторной
+работы</h2>
+<ol start="24" type="1">
+<li>Удалила файл /var/www/html/test.html.</li>
+</ol>
+<figure>
+<img src="image/27.png" id="fig:027" style="width:70.0%"
+alt="rm tast.html" />
+<figcaption aria-hidden="true">rm tast.html</figcaption>
+</figure>
+<h1 id="вывод">Вывод</h1>
+<p>Развила навыки администрирования ОС Linux. Получила первое
+практическое знакомство с технологией SELinux. Проверила работу SELinx
+на практике совместно с веб-сервером Apache.</p>
