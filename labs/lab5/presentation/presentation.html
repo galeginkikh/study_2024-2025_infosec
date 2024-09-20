@@ -1,0 +1,213 @@
+<h1 id="информация">Информация</h1>
+<h2 id="докладчик">Докладчик</h2>
+<div class="columns" data-align="center">
+<div class="column" style="width:70%;">
+<ul>
+<li>Легиньких Галина Андреевна</li>
+<li>НФИбд-02-21</li>
+<li>Российский университет дружбы народов</li>
+<li><a href="mailto:1032216447@pfur.ru">1032216447@pfur.ru</a></li>
+<li><a href="https://github.com/galeginkikh"
+class="uri">https://github.com/galeginkikh</a></li>
+</ul>
+</div><div class="column" style="width:30%;">
+
+</div>
+</div>
+<h1 id="выполнение">Выполнение</h1>
+<h2 id="цель-работы">Цель работы</h2>
+<p>Изучение механизмов изменения идентификаторов, применения SetUID- и
+Sticky-битов. Получение практических навыков работы в консоли с
+дополнительными атрибутами. Рассмотрение работы механизма смены
+идентификатора процессов пользователей, а также влияние бита Sticky на
+запись и удаление файлов.</p>
+<h2 id="выполнение-лабораторной-работы">Выполнение лабораторной
+работы</h2>
+<p><strong>1.</strong> Установила компилятор gcc. Отключила систему
+защиты до очередной перезагрузки системы.</p>
+<figure>
+<img src="image/1.png" id="fig:001" style="width:70.0%"
+alt="Компилятор gcc" />
+<figcaption aria-hidden="true">Компилятор gcc</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-1">Выполнение лабораторной
+работы</h2>
+<p><strong>2.</strong> Вошла в систему от имени пользователя guest.</p>
+<p><strong>3.</strong> Создала программу simpleid.c.</p>
+<figure>
+<img src="image/2.png" id="fig:002" style="width:70.0%"
+alt="файл simpleid.c" />
+<figcaption aria-hidden="true">файл simpleid.c</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-2">Выполнение лабораторной
+работы</h2>
+<p><strong>4.</strong> Скомплилировала программу и убедилась, что файл
+программы создан.</p>
+<figure>
+<img src="image/3.png" id="fig:003" style="width:70.0%"
+alt="программа simpleid.c" />
+<figcaption aria-hidden="true">программа simpleid.c</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-3">Выполнение лабораторной
+работы</h2>
+<p><strong>5.</strong> Выполнила программу simpleid. Выполнила системную
+программу id. Сравнила полученные результаты. Они схожи.</p>
+<figure>
+<img src="image/4.png" id="fig:004" style="width:70.0%"
+alt="simpleid.c as id" />
+<figcaption aria-hidden="true">simpleid.c as id</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-4">Выполнение лабораторной
+работы</h2>
+<p><strong>6.</strong> Усложнила программу,добавив вывод действительных
+идентификаторов. Получившуюся программу назовала simpleid2.c.
+Скомпилировала и запустила simpleid2.c.</p>
+<figure>
+<img src="image/5.png" id="fig:005" style="width:70.0%"
+alt="файл simpleid2.c" />
+<figcaption aria-hidden="true">файл simpleid2.c</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-5">Выполнение лабораторной
+работы</h2>
+<figure>
+<img src="image/6.png" id="fig:006" style="width:70.0%"
+alt="программа simpleid2.c" />
+<figcaption aria-hidden="true">программа simpleid2.c</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-6">Выполнение лабораторной
+работы</h2>
+<p><strong>7.</strong> От имени суперпользователя выполнила команды.</p>
+<figure>
+<img src="image/7.png" id="fig:007" style="width:70.0%"
+alt="Изменение прав" />
+<figcaption aria-hidden="true">Изменение прав</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-7">Выполнение лабораторной
+работы</h2>
+<p><strong>8.</strong> Выполнила проверку правильности установки новых
+атрибутов и смены владельца файла simpleid2.Запустила simpleid2 и id.
+Сравнила результаты.</p>
+<figure>
+<img src="image/8.png" id="fig:008" style="width:70.0%"
+alt="Проверка правильности установки новых атрибутов" />
+<figcaption aria-hidden="true">Проверка правильности установки новых
+атрибутов</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-8">Выполнение лабораторной
+работы</h2>
+<p><strong>9.</strong> Проделала тоже самое относительно
+SetGID-бита.</p>
+<figure>
+<img src="image/9.png" id="fig:009" style="width:70.0%"
+alt="SetGID-бита" />
+<figcaption aria-hidden="true">SetGID-бита</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-9">Выполнение лабораторной
+работы</h2>
+<p><strong>10.</strong> Создала программу readfile.c. Откомпелировала
+ее.</p>
+<figure>
+<img src="image/10.png" id="fig:010" style="width:70.0%"
+alt="readfile.c" />
+<figcaption aria-hidden="true">readfile.c</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-10">Выполнение лабораторной
+работы</h2>
+<p><strong>11.</strong> . Сменила владельца у файла readfile.c и
+изменила права так, чтобы только суперпользователь (root) мог прочитать
+его, a guest не мог. Проверила, что пользователь guest не может
+прочитать файл readfile.c. Сменила у программы readfile владельца и
+установила SetU’D-бит.</p>
+<figure>
+<img src="image/11.png" id="fig:011" style="width:70.0%"
+alt="Смена владельца файла readfile.c" />
+<figcaption aria-hidden="true">Смена владельца файла
+readfile.c</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-11">Выполнение лабораторной
+работы</h2>
+<p><strong>12.</strong> Проверила, может ли программа readfile прочитать
+файл readfile.c. Проверила, может ли программа readfile прочитать файл
+/etc/shadow.</p>
+<figure>
+<img src="image/12.png" id="fig:012" style="width:70.0%"
+alt="Проверка readfile.c" />
+<figcaption aria-hidden="true">Проверка readfile.c</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-12">Выполнение лабораторной
+работы</h2>
+<p><strong>13.</strong> От имени суперпользователя все выполняется.</p>
+<figure>
+<img src="image/13.png" id="fig:013" style="width:70.0%"
+alt="cat readfile.c" />
+<figcaption aria-hidden="true">cat readfile.c</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-13">Выполнение лабораторной
+работы</h2>
+<figure>
+<img src="image/14.png" id="fig:014" style="width:70.0%"
+alt="Запуск readfile.c" />
+<figcaption aria-hidden="true">Запуск readfile.c</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-14">Выполнение лабораторной
+работы</h2>
+<figure>
+<img src="image/15.png" id="fig:015" style="width:70.0%"
+alt="Запуск shadow" />
+<figcaption aria-hidden="true">Запуск shadow</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-15">Выполнение лабораторной
+работы</h2>
+<p><strong>14.</strong> Выяснила, установлен ли атрибут Sticky на
+директории /tmp. От имени пользователя guest создала файл file01.txt в
+директории /tmp со словом test. Просмотрела атрибуты у только что
+созданного файла и разрешила чтение и запись для категории пользователей
+“Все остальные”.</p>
+<figure>
+<img src="image/16.png" id="fig:016" style="width:70.0%"
+alt="file01.txt" />
+<figcaption aria-hidden="true">file01.txt</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-16">Выполнение лабораторной
+работы</h2>
+<p><strong>15.</strong> От пользователя guest2 попробовала дозаписать в
+файл /tmp/file01.txt слово test2. Проверила содержимое файла.</p>
+<figure>
+<img src="image/17.png" id="fig:017" style="width:70.0%"
+alt="Изменение file01.txt" />
+<figcaption aria-hidden="true">Изменение file01.txt</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-17">Выполнение лабораторной
+работы</h2>
+<p><strong>16.</strong> От пользователя guest2 попробовала дозаписать в
+файл /tmp/file01.txt слово test3. Проверила содержимое файла. А вот
+удалить файл не удалось.</p>
+<figure>
+<img src="image/18.png" id="fig:018" style="width:70.0%"
+alt="Удаление file01.txt" />
+<figcaption aria-hidden="true">Удаление file01.txt</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-18">Выполнение лабораторной
+работы</h2>
+<p><strong>17.</strong> Повысила прова до суперпользователя. Сняла
+аотрибут t. Покинула режим суперпользователя. Проверила отсутвтвие
+атрибута t. Повторила предыдущие шаги.</p>
+<figure>
+<img src="image/19.png" id="fig:019" style="width:70.0%"
+alt="Атрибут -t" />
+<figcaption aria-hidden="true">Атрибут -t</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-19">Выполнение лабораторной
+работы</h2>
+<p><strong>18.</strong> Вернула атрибут t.</p>
+<figure>
+<img src="image/20.png" id="fig:020" style="width:70.0%"
+alt="Атрибут +t" />
+<figcaption aria-hidden="true">Атрибут +t</figcaption>
+</figure>
+<h1 id="вывод">Вывод</h1>
+<p>Изучила механизмы изменения идентификаторов, применения SetUID- и
+Sticky-битов. Получила практические навыки работы в консоли с
+дополнительными атрибутами. Рассмотрела работы механизма смены
+идентификатора процессов пользователей, а также влияние бита Sticky на
+запись и удаление файлов.</p>
