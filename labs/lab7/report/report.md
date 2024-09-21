@@ -1,17 +1,12 @@
 ---
 ## Front matter
-title: "Шаблон отчёта по лабораторной работе"
-subtitle: "Простейший вариант"
-author: "Дмитрий Сергеевич Кулябов"
+title: "Отчет по лабораторной работе №7"
+subtitle: "Элементы криптографии. Однократное гаммирование"
+author: "Легиньких Галина Андреевна"
 
 ## Generic otions
 lang: ru-RU
 toc-title: "Содержание"
-
-## Bibliography
-bibliography: bib/cite.bib
-csl: pandoc/csl/gost-r-7-0-5-2008-numeric.csl
-
 ## Pdf output format
 toc: true # Table of contents
 toc-depth: 2
@@ -25,24 +20,22 @@ documentclass: scrreprt
 polyglossia-lang:
   name: russian
   options:
-	- spelling=modern
-	- babelshorthands=true
+  - spelling=modern
+  - babelshorthands=true
 polyglossia-otherlangs:
   name: english
 ## I18n babel
 babel-lang: russian
 babel-otherlangs: english
 ## Fonts
-mainfont: IBM Plex Serif
-romanfont: IBM Plex Serif
-sansfont: IBM Plex Sans
-monofont: IBM Plex Mono
-mathfont: STIX Two Math
-mainfontoptions: Ligatures=Common,Ligatures=TeX,Scale=0.94
-romanfontoptions: Ligatures=Common,Ligatures=TeX,Scale=0.94
-sansfontoptions: Ligatures=Common,Ligatures=TeX,Scale=MatchLowercase,Scale=0.94
-monofontoptions: Scale=MatchLowercase,Scale=0.94,FakeStretch=0.9
-mathfontoptions:
+mainfont: PT Serif
+romanfont: PT Serif
+sansfont: PT Sans
+monofont: PT Mono
+mainfontoptions: Ligatures=TeX
+romanfontoptions: Ligatures=TeX
+sansfontoptions: Ligatures=TeX,Scale=MatchLowercase
+monofontoptions: Scale=MatchLowercase,Scale=0.9
 ## Biblatex
 biblatex: true
 biblio-style: "gost-numeric"
@@ -70,52 +63,34 @@ header-includes:
 
 # Цель работы
 
-Здесь приводится формулировка цели лабораторной работы. Формулировки
-цели для каждой лабораторной работы приведены в методических
-указаниях.
-
-Цель данного шаблона --- максимально упростить подготовку отчётов по
-лабораторным работам.  Модифицируя данный шаблон, студенты смогут без
-труда подготовить отчёт по лабораторным работам, а также познакомиться
-с основными возможностями разметки Markdown.
-
-# Задание
-
-Здесь приводится описание задания в соответствии с рекомендациями
-методического пособия и выданным вариантом.
-
-# Теоретическое введение
-
-Здесь описываются теоретические аспекты, связанные с выполнением работы.
-
-Например, в табл. [-@tbl:std-dir] приведено краткое описание стандартных каталогов Unix.
-
-: Описание некоторых каталогов файловой системы GNU Linux {#tbl:std-dir}
-
-| Имя каталога | Описание каталога                                                                                                          |
-|--------------|----------------------------------------------------------------------------------------------------------------------------|
-| `/`          | Корневая директория, содержащая всю файловую                                                                               |
-| `/bin `      | Основные системные утилиты, необходимые как в однопользовательском режиме, так и при обычной работе всем пользователям     |
-| `/etc`       | Общесистемные конфигурационные файлы и файлы конфигурации установленных программ                                           |
-| `/home`      | Содержит домашние директории пользователей, которые, в свою очередь, содержат персональные настройки и данные пользователя |
-| `/media`     | Точки монтирования для сменных носителей                                                                                   |
-| `/root`      | Домашняя директория пользователя  `root`                                                                                   |
-| `/tmp`       | Временные файлы                                                                                                            |
-| `/usr`       | Вторичная иерархия для данных пользователя                                                                                 |
-
-Более подробно про Unix см. в [@tanenbaum_book_modern-os_ru; @robbins_book_bash_en; @zarrelli_book_mastering-bash_en; @newham_book_learning-bash_en].
+Освоить на практике применение режима однократного гаммирования.
 
 # Выполнение лабораторной работы
 
-Описываются проведённые действия, в качестве иллюстрации даётся ссылка на иллюстрацию (рис. [-@fig:001]).
+**1.** Написала функцию для генерации рандомного ключа(состоит из случайно последовательности символов. (рис. [-@fig:001])
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
+![Ключ](image/1.png){ #fig:001 width=70% }
 
-# Выводы
+**2.** Функция шифрования. В основе используется XOR. (рис. [-@fig:002])
 
-Здесь кратко описываются итоги проделанной работы.
+![Шифрование](image/2.png){ #fig:002 width=70% }
 
-# Список литературы{.unnumbered}
+**3.** Аналогичный принцип для дешифрования. (рис. [-@fig:003])
 
-::: {#refs}
-:::
+![Дешифрование](image/3.png){ #fig:003 width=70% }
+
+**4.** Функция нахождения ключей для фрагмента. (рис. [-@fig:004])
+
+![Фрагмент](image/4.png){ #fig:004 width=70% }
+
+**5.** Основной кусок кода, где задается строчка и вызов всех функций. (рис. [-@fig:005])
+
+![Вызов функций](image/5.png){ #fig:005 width=70% }
+
+**6.** После запуска программы мы получим следующее. (рис. [-@fig:006])
+
+![Вывод](image/6.png){ #fig:006 width=70% }
+
+# Вывод
+
+Освоила на практике применение режима однократного гаммирования.
